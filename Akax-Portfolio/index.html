@@ -1477,6 +1477,37 @@
     }
 
 }
+.cartnova-icon{
+    position:relative;
+    z-index:2;
+    font-size:72px;
+    color:#011a14;
+
+    text-shadow:
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff,
+        0 0 40px #7b2ff7;
+
+    animation:cartFloat 2.5s ease-in-out infinite;
+}
+
+.cartnova-thumb{
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+@keyframes cartFloat{
+    0%,100%{
+        transform:translateY(0) scale(1);
+    }
+
+    50%{
+        transform:translateY(-8px) scale(1.08);
+    }
+}
   </style>
 </head>
 <body>
@@ -1497,7 +1528,7 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <div class="nav-logo">Akax<span>web</span>
+  <div class="nav-logo">Akax<span>Core</span>
     <img src="./akaxwebsunlogo-removebg-preview.png" alt="">
 
   </div>
@@ -1663,7 +1694,16 @@
         <div class="skill-header"><span class="skill-name">Vite</span><span class="skill-pct">75%</span></div>
         <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
       </div>
+<div class="skill-item">
+    <div class="skill-header">
+        <span class="skill-name">Data Structures & Algorithms</span>
+        <span class="skill-pct">70%</span>
+    </div>
 
+    <div class="skill-bar">
+        <div class="skill-fill" data-width="85"></div>
+    </div>
+</div>
 
 
 
@@ -1721,7 +1761,9 @@
         </div>
 
        
-
+<div class="strength-pill">
+    Data Structures & Algorithms
+</div>
 
 
     </div>
@@ -1876,6 +1918,60 @@ Designed RESTful APIs and a MySQL database for efficient data handling; used Git
       </div>
         </a>
         </div>
+<!-- PROJECT 05 - CARTNOVA -->
+<div class="project-card reveal">
+
+    <div class="project-thumb cartnova-thumb">
+        <div class="thumb-bg"></div>
+
+        <i class="fas fa-cart-shopping cartnova-icon"></i>
+    </div>
+
+    <div>
+        <a href="https://akax-web.github.io/CartNova-Full-Stack-E-Commerce/"
+           target="_blank"
+           style="text-decoration:none;">
+
+            <div class="project-body">
+
+                <div class="project-number">
+                    Project / 05
+                </div>
+
+                <div class="project-title">
+                    CartNova - Full Stack E-Commerce
+                </div>
+
+                <div class="project-desc">
+                    Developed a full-stack e-commerce application with
+                    product browsing, shopping cart, authentication,
+                    wishlist, checkout, and responsive user interface.
+                </div>
+
+                <div class="timeline-tags">
+
+                    <span class="tag">React.js</span>
+
+                    <span class="tag">Java</span>
+
+                    <span class="tag">Spring Boot</span>
+
+                    <span class="tag">MySQL</span>
+
+                    <span class="tag">JWT</span>
+
+                    <span class="tag">REST API</span>
+
+                </div>
+
+            </div>
+
+        </a>
+    </div>
+
+</div>
+
+
   </div>
   
   
@@ -1909,7 +2005,7 @@ Designed RESTful APIs and a MySQL database for efficient data handling; used Git
 
       <div class="resume-buttons">
      
-        <a href="https://drive.google.com/file/d/18r4Xd_NutmR29vh5P1pDA88TTZNauutT/view?usp=sharing"
+        <a href="https://drive.google.com/file/d/1798PecgScX2QY-HsJT7-borIzF4EJFuz/view?usp=drivesdk"
            target="_blank"
            class="resume-view-btn">
           Resume Template

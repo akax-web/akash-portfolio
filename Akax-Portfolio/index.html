@@ -1872,6 +1872,195 @@
         height:34px;
     }
 }
+/* =====================================================
+   PROJECT 06 — CLIENT PROJECT BADGE
+===================================================== */
+
+.sme-client-badge{
+    position:absolute;
+    top:14px;
+    right:14px;
+    z-index:5;
+
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+
+    padding:7px 13px;
+
+    border-radius:50px;
+
+    background:rgba(0,212,255,.10);
+    border:1px solid rgba(0,212,255,.45);
+
+    color:var(--primary);
+
+    font-family:'Space Mono',monospace;
+    font-size:.65rem;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:
+        0 0 10px rgba(0,212,255,.18);
+
+    animation:clientBadgePulse 2.2s ease-in-out infinite;
+}
+
+.sme-client-badge i{
+    font-size:.62rem;
+    animation:clientBadgeIcon 1.5s ease-in-out infinite;
+}
+
+@keyframes clientBadgePulse{
+
+    0%,100%{
+        transform:translateY(0);
+        box-shadow:0 0 10px rgba(0,212,255,.18);
+    }
+
+    50%{
+        transform:translateY(-2px);
+        box-shadow:
+            0 0 14px rgba(0,212,255,.30),
+            0 0 24px rgba(123,47,247,.12);
+    }
+
+}
+
+@keyframes clientBadgeIcon{
+
+    0%,100%{
+        transform:scale(1);
+        opacity:.8;
+    }
+
+    50%{
+        transform:scale(1.15);
+        opacity:1;
+    }
+
+}
+/* =====================================================
+   MOBILE ANIMATION FIX
+   Keep desktop animations unchanged
+===================================================== */
+
+@media (max-width: 768px){
+
+    /* PROFILE RING — always animate on mobile */
+    .profile-trigger::before{
+        animation: profilePulse 2.5s infinite !important;
+    }
+
+    .profile-trigger{
+        animation: profileMobileFloat 3s ease-in-out infinite;
+        will-change: transform;
+    }
+
+    @keyframes profileMobileFloat{
+
+        0%,100%{
+            transform: translateY(0) scale(1);
+        }
+
+        50%{
+            transform: translateY(-3px) scale(1.04);
+        }
+
+    }
+
+
+    /* PROJECT ICON ANIMATIONS */
+
+    .calc-icon{
+        animation: calcFloat 2.2s ease-in-out infinite !important;
+        will-change: transform;
+    }
+
+    .admin-icon{
+        animation: adminPulse 2s ease-in-out infinite !important;
+        will-change: transform;
+    }
+
+    .learn-icon{
+        animation: learnBounce 2.4s ease-in-out infinite !important;
+        will-change: transform;
+    }
+
+    .rag-icon{
+        animation: brainFloat 3s ease-in-out infinite !important;
+        will-change: transform;
+    }
+
+    .cartnova-icon{
+        animation: cartFloat 2.5s ease-in-out infinite !important;
+        will-change: transform;
+    }
+
+    .sme-icon{
+        animation: smeFloat 2.8s ease-in-out infinite !important;
+        will-change: transform;
+    }
+
+
+    /* BADGES / PILLS */
+
+    .sme-client-badge{
+        animation: clientBadgePulse 2.2s ease-in-out infinite !important;
+        will-change: transform;
+    }
+
+    .availability-badge{
+        animation: badgeFloat 3s ease-in-out infinite !important;
+        will-change: transform;
+    }
+
+    .status-dot{
+        animation: statusPulse 1.5s infinite !important;
+    }
+
+    .strength-pill{
+        animation: floatCard 4s ease-in-out infinite !important;
+        will-change: transform;
+    }
+
+
+    /* OFFER / PRICE ANIMATIONS */
+
+    .offer-card{
+        animation: offerFloat 3s ease-in-out infinite !important;
+        will-change: transform;
+    }
+
+    .offer-badge{
+        animation: pulseGold 2s infinite !important;
+    }
+
+    .new-price{
+        animation: pulsePrice 2s ease-in-out infinite !important;
+    }
+
+
+    /* RESUME LOGO */
+
+    .resume-icon{
+        animation: logoPulse 2s infinite !important;
+        will-change: transform;
+    }
+
+
+    /* BACK TO TOP */
+
+    .back-top{
+        transition:
+            opacity .3s ease,
+            transform .3s ease;
+    }
+
+}
   </style>
 </head>
 <body>
@@ -2299,7 +2488,7 @@ Designed RESTful APIs and a MySQL database for efficient data handling; used Git
     </div>
 
   </a></div>
-   <div class="projects-grid">
+  
    
       <div class="project-card reveal">
         <div class="project-thumb">
@@ -2383,9 +2572,78 @@ Designed RESTful APIs and a MySQL database for efficient data handling; used Git
         </a>
     </div>
 
+
+
+    
 </div>
 
+<!-- =====================================================
+     PROJECT 06 — SUBRAMANI ENTERPRISES
+     Add this immediately AFTER Project 05 closing div
+===================================================== -->
 
+<div class="project-card reveal">
+
+    <div class="project-thumb sme-thumb">
+
+        <div class="thumb-bg"></div>
+
+        <!-- CLIENT PROJECT BADGE -->
+        <div class="sme-client-badge">
+            <i class="fas fa-briefcase"></i>
+            Client Project
+        </div>
+
+        <i class="fas fa-car-side sme-icon"></i>
+
+    </div>
+
+    <div>
+
+        <a href="https://sme-enterprises.netlify.app/"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="text-decoration:none;">
+
+            <div class="project-body">
+
+                <div class="project-number">
+                    Project / 06
+                </div>
+
+                <div class="project-title">
+                    Subramani Enterprises - Driving Services
+                </div>
+
+                <div class="project-desc">
+                    Developed a responsive driving services website for a real-world client with service packages, hourly pricing, Udyam registration certificate viewing, direct contact options, and QR-based website access.
+                </div>
+
+                <div class="timeline-tags">
+
+                    <span class="tag">React.js</span>
+
+                    <span class="tag">Java</span>
+
+                    <span class="tag">Spring Boot</span>
+
+                    <span class="tag">MySQL</span>
+
+                    <span class="tag">REST API</span>
+
+                    <span class="tag">Responsive Web Design</span>
+
+                   
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</div>
   </div>
   
   
